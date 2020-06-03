@@ -1,0 +1,24 @@
+{
+  "name": "imi-moji-converter",
+  "version": "1.0.0",
+  "description": "IMI 全角半角統一コンポーネント",
+  "main": "main.js",
+  "files": [
+    "main.js"
+  ],
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [
+    "imi"
+  ],
+  "author": "IMI Tool Project",
+  "license": "MIT",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^5.2.0"
+  },
+  "dependencies": {
+    "moji": "^0.5.1"
+  }
+}

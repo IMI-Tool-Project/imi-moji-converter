@@ -28,13 +28,23 @@ describe('imi-moji-converter', () => {
       expect(toHalfWidth("ダヂヅデド")).to.equal("ﾀﾞﾁﾞﾂﾞﾃﾞﾄﾞ");
       expect(toHalfWidth("バビブベボ")).to.equal("ﾊﾞﾋﾞﾌﾞﾍﾞﾎﾞ");
       expect(toHalfWidth("パピプペポ")).to.equal("ﾊﾟﾋﾟﾌﾟﾍﾟﾎﾟ");
-      expect(toHalfWidth("ヴ")).to.equal("ｳﾞ");
+      expect(toHalfWidth("ヴヷヺ")).to.equal("ｳﾞﾜﾞｦﾞ");
       expect(toHalfWidth("ー")).to.equal("ｰ");
       expect(toHalfWidth("・")).to.equal("･");
       expect(toHalfWidth("。")).to.equal("｡");
       expect(toHalfWidth("、")).to.equal("､");
       expect(toHalfWidth("「")).to.equal("｢");
       expect(toHalfWidth("」")).to.equal("｣");
+    });
+    it("アイヌ語カタカナ", () => {
+      expect(toHalfWidth("セ゚ツ゚ト゚")).to.equal("ｾ゚ﾂ゚ﾄ゚");
+      expect(toHalfWidth("ㇰㇱㇲㇳㇴㇺㇻㇼㇽㇾㇿ")).to.equal("ㇰㇱㇲㇳㇴㇺㇻㇼㇽㇾㇿ");
+    });
+    it("JIS X 0201に存在しないカタカナ", () => {
+      expect(toHalfWidth("ヵヶ")).to.equal("ヵヶ");
+      expect(toHalfWidth("ヰヱ")).to.equal("ヰヱ");
+      expect(toHalfWidth("ヸヹ")).to.equal("ヸヹ");
+      expect(toHalfWidth("ヽヾ")).to.equal("ヽヾ");
     });
   });
 
@@ -63,7 +73,7 @@ describe('imi-moji-converter', () => {
       expect(toFullWidth("ﾀﾞﾁﾞﾂﾞﾃﾞﾄﾞ")).to.equal("ダヂヅデド");
       expect(toFullWidth("ﾊﾞﾋﾞﾌﾞﾍﾞﾎﾞ")).to.equal("バビブベボ");
       expect(toFullWidth("ﾊﾟﾋﾟﾌﾟﾍﾟﾎﾟ")).to.equal("パピプペポ");
-      expect(toFullWidth("ｳﾞ")).to.equal("ヴ");
+      expect(toFullWidth("ｳﾞﾜﾞｦﾞ")).to.equal("ヴヷヺ");
       expect(toFullWidth("ｰ")).to.equal("ー");
       expect(toFullWidth("･")).to.equal("・");
       expect(toFullWidth("｡")).to.equal("。");

@@ -14,7 +14,7 @@
 ```
 $ mkdir work
 $ cd work
-$ npm install imi-moji-converter-1.0.0.tgz
+$ npm install IMI-Tool-Project/imi-moji-converter
 ```
 
 # API
@@ -54,13 +54,11 @@ $
 
 ## 環境構築
 
-ソースアーカイブ `imi-moji-converter-1.0.0.src.tgz` を入手して、
 以下の手順でインストールします。
 
 ```
-$ mkdir imi-moji-converter
+$ git clone https://github.com/IMI-Tool-Project/imi-moji-converter.git
 $ cd imi-moji-converter
-$ tar xvzf imi-moji-converter-1.0.0.src.tgz
 $ npm install
 ```
 
@@ -93,7 +91,7 @@ $
 
 ## ファイル構成
 
-開発対象となる Javascript は以下のみです。
+開発対象となる JavaScript は以下のみです。
 
 ```
 main.js : 関数本体
